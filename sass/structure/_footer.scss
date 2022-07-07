@@ -19,15 +19,18 @@
             margin-bottom: 0px;
         }
 }
-
-.logo-studio--color-light {
+.logo__logo-studio {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
-    color: var(--color-header);
+    
+}
+
+.logo-studio--color-light {
+color: var(--color-header);
 }
 
 .footer-contacts__address-block {
