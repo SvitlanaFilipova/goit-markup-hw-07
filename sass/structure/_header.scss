@@ -197,16 +197,12 @@ color: var(--color-logo-studio);
             margin-left: 86px;
     }
     @include desktop {
+        display: flex;
         flex-wrap: nowrap;
         margin-left: 306px;
+        flex-direction: row;
     }
 
-           
-        
-    // @include tablet {
-    //         margin-left: 84px;
-           
-    //     }
 }
 
 .container__menu-connection .menu-connection__item+.menu-connection__item {
@@ -216,20 +212,14 @@ color: var(--color-logo-studio);
 }
 
 
-// .contacts {
-//     margin-bottom: 64px;
-//     @include tablet {
-//     margin-top: 21px;
-//     margin-bottom: 21px;
-//     margin-left: 86px;
-//     }
-//     @include desktop {
-//         margin-left: 306px;
-//     }
-// }
-
 .menu-connection__icon-mail {
     display: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        .item &:hover,
+        .item &:focus {
+            fill: var(--accent-color);
+        }
     @include tablet {
         display: inline-block;
     width: 16px;
@@ -238,11 +228,7 @@ color: var(--color-logo-studio);
     margin-right: 10px;
     fill: currentColor;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .item &:hover,
-    .item &:focus {
-        fill: var(--accent-color);
-}
+    
 }
 }
 
@@ -306,18 +292,22 @@ color: var(--color-logo-studio);
 .menu-connection__link.phone {
     color: #2196F3;
     padding-bottom: 32px;
+    &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
     @include tablet {
         padding-bottom: 0px;
         color: var(--color-small-discription);
     }
 
-    @include desktop {
-        
-    }
-
 }
 .menu-connection__link.mail {
     color: var(--color-small-discription);
+    &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 
     @include tablet {
         padding-bottom: 10px;

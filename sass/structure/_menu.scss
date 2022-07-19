@@ -5,6 +5,8 @@
     border: none;
     background: transparent;
     color: #212121;
+    z-index: 991;
+    
     @include tablet {
         display: none;
     }
