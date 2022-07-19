@@ -20,62 +20,102 @@
 
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header class="header-back">
-      <div class="container main">
-        <nav class="nav">
-          <a class="logo" href="index.html">
-            <span class="logo__logo-web">Web</span>
-            <span class="logo__logo-studio logo-studio--color-dark"
-              >Studio</span
-            ></a
-          >
-          <ul class="menu nav__menu">
-            <li class="menu__item">
-              <a class="menu__nav-li current" href="index.html">Студия</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__nav-li" href="portfolio.html">Портфолио</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__nav-li" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="menu-connection container__menu-connection">
-          <li class="menu-connection__item">
-            <a class="menu-connection__link" href="mailto:info@devstudio.com">
-              <svg class="menu-connection__icon-mail">
-                <use
-                  href="./images/icomoon_final/symbol-defs.svg#icon-mail"
-                ></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="menu-connection__item header">
-            <a class="menu-connection__link" href="tel:+380961111111">
-              <svg class="menu-connection__icon-phone">
-                <use
-                  href="./images/icomoon_final/symbol-defs.svg#icon-phone"
-                ></use>
-              </svg>
-              +38 096 111 11 11</a
+      <div class="page-header">
+        <div class="container main">
+          <nav class="nav">
+            <a class="logo" href="index.html">
+              <span class="logo__logo-web">Web</span>
+              <span class="logo__logo-studio logo-studio--color-dark"
+                >Studio</span
+              ></a
             >
-          </li>
-        </ul>
+            <button type="button" class="menu-button is-open" data-menu-button>
+              <svg
+                width="24px"
+                height="24px"
+                area-label="Переключатель мобильного меню"
+                aria-controls="menu-container"
+                aria-expanded="false"
+              >
+                <use
+                  class="icon-close"
+                  href="./images/icomoon_final/symbol-defs.svg#close"
+                ></use>
+                <use
+                  class="icon-menu"
+                  href="./images/icomoon_final/symbol-defs.svg#menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+              <ul class="menu nav__menu">
+                <li class="menu__item">
+                  <a class="menu__nav-li current" href="index.html">Студия</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__nav-li" href="portfolio.html">Портфолио</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__nav-li" href="#">Контакты</a>
+                </li>
+              </ul>
+
+              <ul class="menu-connection container__menu-connection">
+                <li class="menu-connection__item">
+                  <a
+                    class="menu-connection__link mail"
+                    href="mailto:info@devstudio.com"
+                  >
+                    <svg class="menu-connection__icon-mail">
+                      <use
+                        href="./images/icomoon_final/symbol-defs.svg#icon-mail"
+                      ></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="menu-connection__item header">
+                  <a
+                    class="menu-connection__link phone"
+                    href="tel:+380961111111"
+                  >
+                    <svg class="menu-connection__icon-phone">
+                      <use
+                        href="./images/icomoon_final/symbol-defs.svg#icon-phone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="social-header">
+                <a class="social-link-header" href="#">Instagram</a>
+                <a class="social-link-header" href="#">Twitter</a>
+                <a class="social-link-header" href="#">Facebook</a>
+                <a class="social-link-header" href="#">LinkedIn</a>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="big-title">Эффективные решения для вашего бизнеса</h1>
+          <h1 class="big-title">
+            Эффективные решения <br />
+            для вашего бизнеса
+          </h1>
           <button class="button-main-page" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
       </section>
+
       <section class="section">
         <div class="container">
           <h2 class="container__visually-hidden">Наши преимущества</h2>
@@ -122,8 +162,6 @@
                 степени обуславливает.
               </p>
             </li>
-
-            <li></li>
             <li class="container__item">
               <div class="container__benefits-div">
                 <svg class="container__benefits-image">
@@ -148,13 +186,22 @@
           <ul class="list-our-work">
             <li class="item work">
               <img
+                srcset="
+                  ./images/adaptiv_img/images/index/works/desktops.jpg    1x,
+                  ./images/adaptiv_img/images/index/works/desktops-2x.jpg 2x
+                "
                 src="./images/what_we_do/img1_work_progressive.jpg"
-                alt="написание кода"
+                alt="написание
+              кода"
               />
               <p class="context-our-work">Десктопные приложения</p>
             </li>
             <li class="item work">
               <img
+                srcset="
+                  ./images/adaptiv_img/images/index/works/mobiles.jpg    1x,
+                  ./images/adaptiv_img/images/index/works/mobiles-2x.jpg 2x
+                "
                 src="./images/what_we_do/img2_work_progressive.jpg"
                 alt="css"
               />
@@ -162,6 +209,10 @@
             </li>
             <li class="item work">
               <img
+                srcset="
+                  ./images/adaptiv_img/images/index/works/design.jpg    1x,
+                  ./images/adaptiv_img/images/index/works/design-2x.jpg 2x
+                "
                 src="./images/what_we_do/img3_work_progressive.jpg"
                 alt="дизайн"
               />
@@ -170,19 +221,44 @@
           </ul>
         </div>
       </section>
+
       <section class="section our-team-back">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
 
           <ul class="list-our-team">
             <li class="item-team">
-              <img
-                class="team-photo"
-                src="./images/team/img1_team.jpg"
-                alt="продакт-дизайнер"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/desktop/designer.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/desktop/designer-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/tablet/designer-tab.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/tablet/designer-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/mobile/designer-mob.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/mobile/designer-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img
+                  class="team-photo"
+                  src="./images/team/img1_team.jpg"
+                  alt="продакт-дизайнер"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-h3-p">
                 <h3 class="team-names">Игорь Демьяненко</h3>
                 <p class="team-position">Product Designer</p>
@@ -228,12 +304,36 @@
             </li>
 
             <li class="item-team">
-              <img
-                src="./images/team/img2_team.jpg"
-                alt="фронтенд-девелопер"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/desktop/frontend.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/desktop/frontend-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/tablet/frontend-tab.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/tablet/frontend-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/mobile/frontend-mob.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/mobile/frontend-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img
+                  src="./images/team/img2_team.jpg"
+                  alt="фронтенд-девелопер"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-h3-p">
                 <h3 class="team-names">Ольга Репина</h3>
                 <p class="team-position">Frontend Developer</p>
@@ -279,12 +379,36 @@
             </li>
 
             <li class="item-team">
-              <img
-                src="./images/team/img3_team.jpg"
-                alt="маркетолог"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/desktop/marketing.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/desktop/marketing-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/tablet/marketing-tab.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/tablet/marketing-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/mobile/marketing-mob.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/mobile/marketing-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img
+                  src="./images/team/img3_team.jpg"
+                  alt="маркетолог"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-h3-p">
                 <h3 class="team-names">Николай Тарасов</h3>
                 <p class="team-position">Marketing</p>
@@ -330,12 +454,36 @@
             </li>
 
             <li class="item-team">
-              <img
-                src="./images/team/img4_team.jpg"
-                alt="UI-дизайнер"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/desktop/ui.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/desktop/ui-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/tablet/ui-tab.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/tablet/ui-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/index/team/mobile/ui-mob.jpg    1x,
+                    ./images/adaptiv_img/images/index/team/mobile/ui-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img
+                  src="./images/team/img4_team.jpg"
+                  alt="UI-дизайнер"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-h3-p">
                 <h3 class="team-names">Михаил Ермаков</h3>
                 <p class="team-position">UI Designer</p>
@@ -387,7 +535,7 @@
         <div class="container">
           <h2 class="section-title clients">Постоянные клиенты</h2>
           <ul class="list clients">
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients one">
                   <use
@@ -396,7 +544,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients two">
                   <use
@@ -405,7 +553,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients three">
                   <use
@@ -414,7 +562,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients four">
                   <use
@@ -423,7 +571,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients five">
                   <use
@@ -432,7 +580,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client-li">
+            <li class="client-item">
               <a href="#" class="link-company">
                 <svg class="icon-clients six">
                   <use
@@ -449,9 +597,11 @@
     <footer class="footer-back">
       <div class="container footer">
         <div class="footer-contacts">
-          <a class="logo" href="#"
+          <a class="logo footer" href="#"
             ><span class="logo__logo-web">Web</span
-            ><span class="logo-studio--color-light">Studio</span></a
+            ><span class="logo__logo-studio logo-studio--color-light"
+              >Studio</span
+            ></a
           >
 
           <address class="footer-contacts__address-block">
@@ -608,14 +758,14 @@
                 ></use>
               </svg>
             </span>
-            Соглашаюсь с рассылкой и принимаю &nbsp;<a href=""
-              >Условия договора</a
-            ></label
+            Соглашаюсь с рассылкой и принимаю &nbsp;
+            <a href="">Условия договора</a></label
           >
         </div>
         <button type="submit" class="btn-modal">Отправить</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,39 +1,80 @@
 .hero {
+    padding: 118px 0;
     max-width: 1600px;
+     width: 100%;
+    height: 400px;
+    background-size: cover;
+        
     background-color: var(--color-title);
     text-align: center;
-
-    padding: 200px 0;
     margin-right: auto;
     margin-left: auto;
 
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/title/Img.jpg);
-
-    background-size: cover;
+        url(/images/adaptiv_img/images/index/hero/header-mob.jpg);
+        
     background-repeat: no-repeat;
     background-position: 50% 50%;
+       @include retina {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(/images/adaptiv_img/images/index/hero/header-mob-2x.jpg);
+        }
+@include tablet {
+    background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(/images/adaptiv_img/images/index/hero/header-tablet.jpg);
+            @include retina {
+                    background-image: linear-gradient(to right,
+                            rgba(47, 48, 58, 0.4),
+                            rgba(47, 48, 58, 0.4)),
+                        url(/images/adaptiv_img/images/index/hero/header-tablet-2x.jpg);
+                }
+        }
+@include desktop {
+    padding: 118px 0;
+    background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(/images/adaptiv_img/images/index/hero/header.jpg);
 }
+ @include retina {
+     background-image: linear-gradient(to right,
+             rgba(47, 48, 58, 0.4),
+             rgba(47, 48, 58, 0.4)),
+         url(/images/adaptiv_img/images/index/hero/header-2x.jpg);
+ }
+    }
 
 .container.hero {
     padding-top: 200px;
 }
 
-/* hero */
 
 .big-title {
-    max-width: 696px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 30px;
 
+    @include mobile {
+            
+            font-size: 26px;
+            line-height: 42px;
+        }
+
     font-family: var(--main-font);
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     color: var(--color-header);
+
+    @include desktop {
+            font-size: 44px;
+            line-height: 1.4;
+    }
 }

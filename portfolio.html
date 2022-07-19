@@ -21,51 +21,119 @@
   </head>
   <body>
     <header class="header-back">
-      <div class="container main">
-        <nav class="nav">
-          <a class="logo" href="index.html">
-            <span class="logo__logo-web">Web</span>
-            <span class="logo__logo-studio logo-studio--color-dark"
-              >Studio</span
-            ></a
-          >
-          <ul class="menu nav__menu">
-            <li class="menu__item">
-              <a class="menu__nav-li" href="index.html">Студия</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__nav-li current" href="portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="menu__item">
-              <a class="menu__nav-li" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="menu-connection container__menu-connection">
-          <li class="menu-connection__item">
-            <a class="menu-connection__link" href="mailto:info@devstudio.com">
-              <svg class="menu-connection__icon-mail">
-                <use
-                  href="./images/icomoon_final/symbol-defs.svg#icon-mail"
-                ></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="menu-connection__item header">
-            <a class="menu-connection__link" href="tel:+380961111111">
-              <svg class="menu-connection__icon-phone">
-                <use
-                  href="./images/icomoon_final/symbol-defs.svg#icon-phone"
-                ></use>
-              </svg>
-              +38 096 111 11 11</a
+      <div class="page-header">
+        <div class="container main">
+          <nav class="nav">
+            <a class="logo" href="index.html">
+              <span class="logo__logo-web">Web</span>
+              <span class="logo__logo-studio logo-studio--color-dark"
+                >Studio</span
+              ></a
             >
-          </li>
-        </ul>
+            <button type="button" class="menu-button is-open" data-menu-button>
+              <svg
+                width="24px"
+                height="24px"
+                area-label="Переключатель мобильного меню"
+                aria-controls="menu-container"
+                aria-expanded="false"
+              >
+                <use
+                  class="icon-close"
+                  href="./images/icomoon_final/symbol-defs.svg#close"
+                ></use>
+                <use
+                  class="icon-menu"
+                  href="./images/icomoon_final/symbol-defs.svg#menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+              <!-- <button type="button" >
+                <svg 
+                width="24px"
+                height="24px"
+                class="icon-close"></svg>
+                 <use href="./images/icomoon_final/symbol-defs.svg#close"></use>
+
+                </svg>
+              </button> -->
+              <!-- <button
+                type="button"
+                class="menu-button is-open"
+                data-menu-button
+              >
+                <svg
+                  width="24px"
+                  height="24px"
+                  area-label="Переключатель мобильного меню"
+                  aria-controls="menu-container"
+                  aria-expanded="false"
+                >
+                  <use
+                    class="icon-close"
+                    href="./images/icomoon_final/symbol-defs.svg#close"
+                  ></use>
+                  <use
+                    class="icon-menu"
+                    href="./images/icomoon_final/symbol-defs.svg#menu"
+                  ></use>
+                </svg>
+              </button> -->
+              <div class="navigation">
+                <ul class="menu nav__menu">
+                  <li class="menu__item">
+                    <a class="menu__nav-li" href="index.html">Студия</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__nav-li current" href="portfolio.html"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__nav-li" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts">
+                <ul class="menu-connection container__menu-connection">
+                  <li class="menu-connection__item">
+                    <a
+                      class="menu-connection__link mail"
+                      href="mailto:info@devstudio.com"
+                    >
+                      <svg class="menu-connection__icon-mail">
+                        <use
+                          href="./images/icomoon_final/symbol-defs.svg#icon-mail"
+                        ></use>
+                      </svg>
+                      info@devstudio.com
+                    </a>
+                  </li>
+                  <li class="menu-connection__item header">
+                    <a
+                      class="menu-connection__link phone"
+                      href="tel:+380961111111"
+                    >
+                      <svg class="menu-connection__icon-phone">
+                        <use
+                          href="./images/icomoon_final/symbol-defs.svg#icon-phone"
+                        ></use>
+                      </svg>
+                      +38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="social-header">
+                <a class="social-link-header" href="#">Instagram</a>
+                <a class="social-link-header" href="#">Twitter</a>
+                <a class="social-link-header" href="#">Facebook</a>
+                <a class="social-link-header" href="#">LinkedIn</a>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -103,12 +171,35 @@
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
                 <div class="portfolio-overlay">
+                  <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/1-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/1-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/1-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/1-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/1-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/1-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                   <img
                     src="./images/portfolio/img_1.jpg"
                     alt="веб-сайт"
                     width="370"
                     height="290"
                   />
+                  </picture>
                   <p class="portfolio-overlay__overlay-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -123,12 +214,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/2-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/2-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/2-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/2-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/2-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/2-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_2.jpg"
                   alt="постер"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">
                     Постер New Orlean vs Golden Star
@@ -139,12 +253,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/3-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/3-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/3-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/3-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/3-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/3-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_3.jpg"
                   alt="приложение"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">Ресторан Seafood</h2>
                   <p class="info-projects__description">Приложение</p>
@@ -153,12 +290,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/4-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/4-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/4-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/4-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/4-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/4-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_4.jpg"
                   alt="маркетинг"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">Проект Prime</h2>
                   <p class="info-projects__description">Маркетинг</p>
@@ -167,12 +327,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/5-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/5-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/5-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/5-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/5-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/5-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_5.jpg"
                   alt="приложение"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">Проект Boxes</h2>
                   <p class="info-projects__description">Приложение</p>
@@ -181,12 +364,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/6-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/6-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/6-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/6-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/6-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/6-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_6.jpg"
                   alt="веб-сайт"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">
                     Inspiration has no Borders
@@ -197,12 +403,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/7-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/7-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/7-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/7-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/7-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/7-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_7.jpg"
                   alt="дизайн"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">Издание Limited Edition</h2>
                   <p class="info-projects__description">Дизайн</p>
@@ -211,12 +440,35 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/8-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/8-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/8-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/8-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/8-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/8-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_8.jpg"
                   alt="маркетинг"
                   width="370"
                   height="290"
                 />
+                </picture>
                 <div class="info-projects">
                   <h2 class="info-projects__name">Проект LAB</h2>
                   <p class="info-projects__description">Маркетинг</p>
@@ -225,6 +477,28 @@
             </li>
             <li class="portfolio-presentation__proposition-list">
               <a href="#" class="portfolio-presentation__cards">
+                <picture>
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/desktop/9-project.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/desktop/9-project-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/tablet/9-project-tab.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/tablet/9-project-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptiv_img/images/portfolio/mobile/9-project-mob.jpg    1x,
+                    ./images/adaptiv_img/images/portfolio/mobile/9-project-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
                 <img
                   src="./images/portfolio/img_9.jpg"
                   alt="приложение"
@@ -245,9 +519,9 @@
     <footer class="footer-back">
       <div class="container footer">
         <div class="footer-contacts">
-          <a class="logo" href="#"
+          <a class="logo down" href="#"
             ><span class="logo__logo-web">Web</span
-            ><span class="logo-studio--color-light">Studio</span></a
+            ><span class="logo__logo-studio logo-studio--color-light">Studio</span></a
           >
 
           <address class="footer-contacts__address-block">
@@ -317,5 +591,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
