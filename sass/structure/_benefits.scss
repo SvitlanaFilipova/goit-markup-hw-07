@@ -23,13 +23,13 @@
 }
 
 .container__item {
-    margin-bottom: 30px;
-    
+        
     @include tablet {
            flex-basis: calc((100% - 2 * 15px) / 2);      
         }
 
    @include desktop {
+            margin-bottom: 0px;
             flex-basis: calc((100% - 3 * 30px) / 4);
         }
 }
@@ -37,8 +37,9 @@
 .container__list-benefits .container__item {
     
     width: 100%;
+    
     @include desktop {
-            margin-right: 30px;
+            margin-right: 0px;
             
                 &:last-child {
                     margin-right: 0px;
@@ -50,6 +51,7 @@
     display: flex;
 
     height: 120px;
+    min-width: 270px;
     justify-content: center;
     align-items: center;
 
@@ -58,6 +60,7 @@
     align-items: center;
 
     margin-bottom: 30px;
+    
 }
 
 .container__benefits-image {

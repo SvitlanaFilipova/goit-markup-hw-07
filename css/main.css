@@ -114,7 +114,7 @@ html {
 }
 
 .nav__menu {
-  margin-bottom: 302px;
+  margin-bottom: 100px;
   display: block;
 }
 @media screen and (min-width: 768px) {
@@ -476,6 +476,13 @@ html {
     width: 100vw;
     height: 100vh;
   }
+  .menu-container .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .menu-container {
@@ -497,34 +504,34 @@ html {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header-mob.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header-mob.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header-mob-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header-mob-2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header-tablet.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header-tablet-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header-tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 118px 0;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/adaptiv_img/images/index/hero/header-2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header-2x.jpg);
   }
 }
 
@@ -938,7 +945,11 @@ portfolio-button__item:hover {
 
 .info-projects__description {
   margin-top: 0px;
-  color: #212121;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .section {
@@ -966,9 +977,6 @@ portfolio-button__item:hover {
   width: 100%;
 }
 
-.container__item {
-  margin-bottom: 30px;
-}
 @media screen and (min-width: 768px) {
   .container__item {
     flex-basis: calc((100% - 30px) / 2);
@@ -976,6 +984,7 @@ portfolio-button__item:hover {
 }
 @media screen and (min-width: 1200px) {
   .container__item {
+    margin-bottom: 0px;
     flex-basis: calc((100% - 90px) / 4);
   }
 }
@@ -985,7 +994,7 @@ portfolio-button__item:hover {
 }
 @media screen and (min-width: 1200px) {
   .container__list-benefits .container__item {
-    margin-right: 30px;
+    margin-right: 0px;
   }
   .container__list-benefits .container__item:last-child {
     margin-right: 0px;
@@ -995,6 +1004,7 @@ portfolio-button__item:hover {
 .container__benefits-div {
   display: flex;
   height: 120px;
+  min-width: 270px;
   justify-content: center;
   align-items: center;
   background-color: #f5f4fa;
@@ -1046,12 +1056,6 @@ portfolio-button__item:hover {
 .section-title {
   margin-bottom: 50px;
   margin-top: 0px;
-  font-family: var(--main-font);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .list-our-work {
@@ -1211,14 +1215,36 @@ section.our-team-back {
   flex-wrap: wrap;
 }
 
-.section-title.clients {
+.section-title {
   margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
-@media screen and (min-width: 480px) {
-  .section-title.clients {
-    font-size: 21px;
-    line-height: 0.8;
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
     letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title.clients {
+    margin-bottom: 50px;
   }
 }
 
@@ -1277,6 +1303,11 @@ section.our-team-back {
   background-color: var(--color-title);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-back {
+    padding-bottom: 0px;
+  }
 }
 
 .container.footer {

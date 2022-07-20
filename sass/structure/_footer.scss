@@ -2,6 +2,9 @@
     background-color: var(--color-title);
     padding-top: 60px;
     padding-bottom: 60px;
+    @include desktop {
+        padding-bottom: 0px;
+    }
 }
 
 .container.footer {

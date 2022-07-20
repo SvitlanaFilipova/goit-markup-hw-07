@@ -15,15 +15,33 @@
     flex-wrap: wrap;
     }
 
+    .section-title {
+        margin-bottom: 30px;
+    font-weight: 700;
+        font-size: 28px;
+        line-height: 33px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        @include tablet {
+            font-weight: 700;
+                font-size: 28px;
+                line-height: 33px;
+                text-align: center;
+                letter-spacing: 0.03em;
+        }
+        @include desktop {
+            font-weight: 700;
+                font-size: 36px;
+                line-height: 42px;
+                text-align: center;
+                letter-spacing: 0.03em;
+        }
+    }
 
 .section-title.clients {
-    margin-bottom: 30px;
-
-    @include mobile {
-        font-size: 21px;
-        line-height: 0.8;
-        letter-spacing: 0.03em;
-    }
+      @include desktop {
+        margin-bottom: 50px;
+           }
     }
 
 .client-item {
