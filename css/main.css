@@ -96,6 +96,11 @@ html {
 .container.main {
   display: flex;
 }
+@media screen and (min-width: 1200px) {
+  .container.main {
+    align-items: baseline;
+  }
+}
 
 .nav {
   display: flex;
@@ -272,7 +277,7 @@ html {
   .container__menu-connection {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 306px;
+    margin-left: 250px;
     flex-direction: row;
   }
 }
@@ -280,6 +285,7 @@ html {
 @media screen and (min-width: 1200px) {
   .container__menu-connection .menu-connection__item + .menu-connection__item {
     display: flex;
+    align-items: baseline;
   }
 }
 
@@ -492,6 +498,17 @@ html {
     justify-content: space-between;
     align-items: center;
   }
+  .menu-container .container {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: flex;
+  }
+  .menu-container .container {
+    align-items: baseline;
+  }
 }
 
 .hero {
@@ -525,7 +542,8 @@ html {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 118px 0;
+    padding: 200px 0;
+    height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/adaptiv_img/images/index/hero/header.jpg);
   }
 }

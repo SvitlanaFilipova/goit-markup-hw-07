@@ -6,6 +6,9 @@
 
 .container.main {
     display: flex;
+    @include desktop {
+        align-items: baseline;
+    }
 }
 
 
@@ -184,7 +187,7 @@ color: var(--color-logo-studio);
     @include desktop {
         display: flex;
         flex-wrap: nowrap;
-        margin-left: 306px;
+        margin-left: 250px;
         flex-direction: row;
     }
 
@@ -193,6 +196,7 @@ color: var(--color-logo-studio);
 .container__menu-connection .menu-connection__item+.menu-connection__item {
     @include desktop {
     display: flex;
+    align-items: baseline;
     }
 }
 

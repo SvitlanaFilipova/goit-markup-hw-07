@@ -69,6 +69,14 @@
         padding-left: 0px;
         justify-content: space-between;
         align-items: center;
+        .container {
+            display: flex;
         }
-  
+        }
+  @include desktop {
+    display: flex;
+    .container {
+    align-items: baseline;}
+
+  }
     }
