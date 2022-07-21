@@ -320,6 +320,7 @@ color: var(--color-logo-studio);
 
 .social-header {
     margin-bottom: 48px;
+    padding-left: 0px;
 @include tablet {
     display: none;
 }

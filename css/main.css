@@ -400,6 +400,7 @@ html {
 
 .social-header {
   margin-bottom: 48px;
+  padding-left: 0px;
 }
 @media screen and (min-width: 768px) {
   .social-header {
@@ -1075,6 +1076,11 @@ portfolio-button__item:hover {
   margin-bottom: 50px;
   margin-top: 0px;
 }
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
 
 .list-our-work {
   display: flex;
@@ -1257,11 +1263,6 @@ section.our-team-back {
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-title.clients {
     margin-bottom: 50px;
   }
 }
@@ -1343,6 +1344,10 @@ section.our-team-back {
 @media screen and (min-width: 1200px) {
   .container.footer {
     align-items: baseline;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -1540,6 +1545,11 @@ section.our-team-back {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .btn-subscription {
+    padding: 0px 28px;
+  }
+}
 
 .btn-subscription__icon {
   margin-left: 10px;
@@ -1548,7 +1558,7 @@ section.our-team-back {
 .footer-subscription__footer-email-line {
   margin-bottom: 20px;
   height: 50px;
-  width: 100%;
+  min-width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -1566,4 +1576,9 @@ section.our-team-back {
   align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .footer-subscription__footer-email-line {
+    max-width: 350px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -10,10 +10,15 @@
 
 
 .section-title {
+    
     margin-bottom: 50px;
     margin-top: 0px;
+    @include desktop {
+        margin-bottom: 50px;
+    }
 
 }
+
 
 .list-our-work {
     display: flex;
