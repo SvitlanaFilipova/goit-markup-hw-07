@@ -32,10 +32,7 @@
 
 
 .menu-container {
-    // display: none;
-
-    // height: 796px;
-    
+   
     background-color: #ffff;
     padding-top: 48px;
     padding-left: 40px;
@@ -43,7 +40,9 @@
     text-align: start;
 
     &.is-open {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     overflow: auto;
     @media screen and (max-width: 767px) {

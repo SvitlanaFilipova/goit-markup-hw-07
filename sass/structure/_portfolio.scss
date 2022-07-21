@@ -60,6 +60,7 @@ portfolio-button__item {
 }
 
 .portfolio-presentation {
+   
     @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -67,13 +68,12 @@ portfolio-button__item {
 }
 }
 
+
+
 .portfolio-presentation__proposition-list {
     width: 100%;
-    // width: 370px;
-    
-    margin-bottom: 0px;
-
-    &:nth-child(3n) {
+margin-bottom: 30px;
+        &:nth-child(3n) {
         margin-right: 0px;
     }
 
@@ -81,10 +81,11 @@ portfolio-button__item {
         margin-bottom: 0px;
     }
         @include tablet {
+            margin-bottom: 0px;
             flex-basis: calc((100% - 2 * 15px) / 2);
 }
-@include desktop {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+        @include desktop {
+            flex-basis: calc((100% - 2 * 30px) / 3);
 }
 }
 
@@ -148,6 +149,18 @@ portfolio-button__item {
     border-color: var(--color-proposition-list);
     border-style: solid;
 }
+
+.info-projects__description.one {
+    @media screen and (max-width: 1200px) {
+            
+    padding-bottom: 35px;}
+
+    @include desktop {
+        padding-bottom: 20x;
+    }
+        
+    }
+
 
 .info-projects__name {
     margin-bottom: 4px;
